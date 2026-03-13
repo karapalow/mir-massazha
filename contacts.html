@@ -75,10 +75,9 @@
               </div>
             </div>
             <div class="working-hours">
-              <h4>Режим работы</h4>
-              <p>Пн–Пт: 9:00 – 20:00</p>
-              <p>Сб: 10:00 – 18:00</p>
-              <p>Вс: выходной</p>
+              <h4>График работы</h4>
+              <p>Ежедневно</p>
+              <p>09:00 — 21:00</p>
             </div>
           </div>
           <div class="animate-on-scroll">
@@ -96,22 +95,80 @@
                   <span class="form-error" id="contacts-phone-error"></span>
                 </div>
                 <div class="form-group">
-                  <label for="contacts-email">Email</label>
-                  <input type="email" id="contacts-email" name="email" placeholder="email@example.com">
+                  <label for="contacts-city">Город *</label>
+                  <input type="text" id="contacts-city" name="city" required placeholder="Ваш город">
+                  <span class="form-error" id="contacts-city-error"></span>
                 </div>
                 <div class="form-group">
-                  <label for="contacts-message">Сообщение *</label>
-                  <textarea id="contacts-message" name="message" required placeholder="Опишите ваш вопрос или интересующий курс"></textarea>
-                  <span class="form-error" id="contacts-message-error"></span>
+                  <label for="contacts-interest">Выберите направление</label>
+                  <select id="contacts-interest" name="interest">
+                    <option value="Лечение">Лечение</option>
+                    <option value="Обучение">Обучение</option>
+                  </select>
                 </div>
-                <button type="submit" class="btn btn--primary" style="width: 100%;">Отправить сообщение</button>
+                <button type="submit" class="btn btn--primary" style="width: 100%;">Отправить заявку</button>
               </form>
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="map-placeholder animate-on-scroll" style="margin-top: 60px;">
-          г. Ташкент, ул. Навои, 15 — укажите координаты для встраивания карты
+    <section class="branches">
+      <div class="container">
+        <div class="section-title animate-on-scroll">
+          <h2>Наши филиалы</h2>
+          <p>Выберите удобный филиал системы МИР</p>
+        </div>
+        <div class="branches__grid">
+          <div class="branch-card animate-on-scroll">
+            <div>
+              <div class="branch-card__title">Филиал МИР — Ташкент</div>
+              <div class="branch-card__city">Ташкент</div>
+              <p>Хамида Алимджана площадь, 13а, Ташкент</p>
+              <div class="branch-card__phones">
+                <div>+998 33 600 06 67</div>
+                <div>+998 78 113 88 18</div>
+              </div>
+            </div>
+            <div class="branch-card__map">
+              <iframe src="https://www.google.com/maps?q=Hamid%20Alimdjan%20maydoni%2013A%2C%20Tashkent%2C%20Uzbekistan&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+
+          <div class="branch-card branch-card--samarkand animate-on-scroll">
+            <div>
+              <div class="branch-card__title">Филиалы МИР — Самарканд</div>
+              <div class="branch-card__city">Самарканд</div>
+              <p>Улица Амира Тимура, 103Б и 86а</p>
+              <div class="branch-card__phones">
+                <div>+998 90 451 69 69</div>
+                <div>+998 90 463 69 69</div>
+              </div>
+            </div>
+            <div class="branch-card__map-grid">
+              <div class="branch-card__map">
+                <iframe src="https://www.google.com/maps?q=Amir%20Temur%20ko%27chasi%20103B%2C%20Samarkand%2C%20Uzbekistan&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              <div class="branch-card__map">
+                <iframe src="https://www.google.com/maps?q=Amir%20Temur%20ko%27chasi%2086A%2C%20Samarkand%2C%20Uzbekistan&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="branch-card animate-on-scroll">
+            <div>
+              <div class="branch-card__title">Филиал МИР — Сайрам</div>
+              <div class="branch-card__city">Сайрам / Шымкент</div>
+              <p>Рынок Сайрам, Амира Темира улица, 237/4, Шымкент</p>
+              <div class="branch-card__phones">
+                <div>+7 747 702 00 57</div>
+              </div>
+            </div>
+            <div class="branch-card__map">
+              <iframe src="https://www.google.com/maps?q=Sairam%20market%2C%20Amir%20Temir%20street%20237%2F4%2C%20Shymkent&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -121,10 +178,11 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
+          <img src="images/logo.png" alt="Мир Массажа" class="footer__logo">
           <h3>Мир Массажа</h3>
           <p>Школа массажа в Ташкенте. Профессиональное обучение с 2016 года.</p>
           <p class="footer__address">г. Ташкент, ул. Навои, 15</p>
-          <p class="footer__hours">Пн–Пт: 9:00–20:00, Сб: 10:00–18:00</p>
+          <p class="footer__hours">Ежедневно: 09:00–21:00</p>
           <div class="footer__social">
             <a href="https://t.me/mirmassazha_uz" target="_blank" rel="noopener" aria-label="Telegram">✈️</a>
             <a href="https://instagram.com/mirmassazha" target="_blank" rel="noopener" aria-label="Instagram">📷</a>

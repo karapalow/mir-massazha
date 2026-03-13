@@ -36,12 +36,24 @@
 
   <main>
     <section class="hero hero--with-bg">
-      <div class="hero__content container animate-on-scroll">
-        <h1 class="hero__title">Обучение массажу с нуля до профессионала</h1>
-        <p class="hero__subtitle">Получите востребованную профессию в Ташкенте и начните зарабатывать уже во время обучения. Авторская методика МИР.</p>
-        <div class="hero__buttons">
-          <a href="courses.html" class="btn btn--primary">Выбрать курс</a>
-          <a href="contacts.html#contact-form" class="btn btn--secondary">Получить консультацию</a>
+      <div class="container">
+        <div class="hero__inner animate-on-scroll">
+          <div class="hero__content">
+            <h1 class="hero__title">МИР — система восстановления здоровья и подготовки специалистов</h1>
+            <p class="hero__subtitle">Комплексная методика, которая объединяет лечение и обучение в единой экосистеме восстановления организма.</p>
+            <ul style="list-style:none;padding:0;margin:0 0 20px 0;color:#4b5563;font-size:15px;">
+              <li>16 лечебных методик</li>
+              <li>6 диагностических систем</li>
+              <li>восстановление организма без лекарств и операций</li>
+            </ul>
+            <div class="hero__buttons">
+              <a href="treatment.html" class="btn btn--primary">Получить лечение</a>
+              <a href="education.html" class="btn btn--secondary">Пройти обучение</a>
+            </div>
+          </div>
+          <div class="hero__image">
+            <img src="images/collaboration.png" alt="Обучение массажу в системе МИР">
+          </div>
         </div>
       </div>
     </section>
@@ -224,7 +236,7 @@
       <div class="container">
         <div class="section-title animate-on-scroll">
           <h2>Свяжитесь с нами</h2>
-          <p>Ответим на ваши вопросы и поможем выбрать подходящий курс</p>
+          <p>Ответим на ваши вопросы и поможем выбрать подходящее направление</p>
         </div>
         <div class="contact__grid">
           <div class="contact__info animate-on-scroll">
@@ -255,11 +267,78 @@
                 <span class="form-error" id="phone-error"></span>
               </div>
               <div class="form-group">
-                <label for="message">Сообщение</label>
-                <textarea id="message" name="message" placeholder="Опишите ваш вопрос или интересующий курс"></textarea>
+                <label for="city">Город *</label>
+                <input type="text" id="city" name="city" required placeholder="Ваш город">
+                <span class="form-error" id="city-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="interest">Выберите направление</label>
+                <select id="interest" name="interest">
+                  <option value="Лечение">Лечение</option>
+                  <option value="Обучение">Обучение</option>
+                </select>
               </div>
               <button type="submit" class="btn btn--primary" style="width: 100%;">Отправить заявку</button>
             </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="branches">
+      <div class="container">
+        <div class="section-title animate-on-scroll">
+          <h2>Наши филиалы</h2>
+          <p>Выберите удобный филиал системы МИР</p>
+        </div>
+        <div class="branches__grid">
+          <div class="branch-card animate-on-scroll">
+            <div>
+              <div class="branch-card__title">Филиал МИР — Ташкент</div>
+              <div class="branch-card__city">Ташкент</div>
+              <p>Хамида Алимджана площадь, 13а, Ташкент</p>
+              <div class="branch-card__phones">
+                <div>+998 33 600 06 67</div>
+                <div>+998 78 113 88 18</div>
+              </div>
+            </div>
+            <div class="branch-card__map">
+              <iframe src="https://www.google.com/maps?q=Hamid%20Alimdjan%20maydoni%2013A%2C%20Tashkent%2C%20Uzbekistan&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+
+          <div class="branch-card branch-card--samarkand animate-on-scroll">
+            <div>
+              <div class="branch-card__title">Филиалы МИР — Самарканд</div>
+              <div class="branch-card__city">Самарканд</div>
+              <p>Улица Амира Тимура, 103Б и 86а</p>
+              <div class="branch-card__phones">
+                <div>+998 90 451 69 69</div>
+                <div>+998 90 463 69 69</div>
+              </div>
+            </div>
+            <div class="branch-card__map-grid">
+              <div class="branch-card__map">
+                <iframe src="https://www.google.com/maps?q=Amir%20Temur%20ko%27chasi%20103B%2C%20Samarkand%2C%20Uzbekistan&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              <div class="branch-card__map">
+                <iframe src="https://www.google.com/maps?q=Amir%20Temur%20ko%27chasi%2086A%2C%20Samarkand%2C%20Uzbekistan&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="branch-card animate-on-scroll">
+            <div>
+              <div class="branch-card__title">Филиал МИР — Сайрам</div>
+              <div class="branch-card__city">Сайрам / Шымкент</div>
+              <p>Рынок Сайрам, Амира Темира 237/4, Шымкент</p>
+              <div class="branch-card__phones">
+                <div>+7 747 702 00 57</div>
+              </div>
+            </div>
+            <div class="branch-card__map">
+              <iframe src="https://www.google.com/maps?q=Sairam%20market%2C%20Amir%20Temir%20street%20237%2F4%2C%20Shymkent&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
           </div>
         </div>
       </div>
@@ -270,10 +349,11 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
+          <img src="images/logo.png" alt="Мир Массажа" class="footer__logo">
           <h3>Мир Массажа</h3>
           <p>Школа массажа в Ташкенте. Профессиональное обучение с 2016 года.</p>
           <p class="footer__address">г. Ташкент, ул. Навои, 15</p>
-          <p class="footer__hours">Пн–Пт: 9:00–20:00, Сб: 10:00–18:00</p>
+          <p class="footer__hours">Ежедневно: 09:00–21:00</p>
           <div class="footer__social">
             <a href="https://t.me/mirmassazha_uz" target="_blank" rel="noopener" aria-label="Telegram">✈️</a>
             <a href="https://instagram.com/mirmassazha" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
