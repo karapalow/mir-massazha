@@ -31,6 +31,10 @@ a {
   padding: 0 16px;
 }
 
+.anchor-spacer {
+  height: 1px;
+}
+
 .section {
   padding: 64px 0;
 }
@@ -277,6 +281,7 @@ a {
     rgba(2, 6, 23, 0.28) 55%,
     rgba(2, 6, 23, 0.52)
   );
+  pointer-events: none; /* Prevent overlay from blocking button/link clicks */
 }
 
 .mir-hero__content {
@@ -1047,6 +1052,51 @@ a {
 
   .branch-card--samarkand .branch-card__map-grid {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .nav {
+    position: relative;
+  }
+
+  .nav__toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    background: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .nav__list {
+    display: none;
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    flex-direction: column;
+    gap: 8px;
+    width: 220px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 18px;
+    border: 1px solid rgba(15, 23, 42, 0.10);
+    box-shadow: 0 18px 40px rgba(2, 6, 23, 0.16);
+    z-index: 60;
+  }
+
+  .nav__list--open {
+    display: flex;
+  }
+
+  .nav__link {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 12px;
   }
 
   .nav__list {

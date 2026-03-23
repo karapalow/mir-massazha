@@ -14,16 +14,16 @@
 <body>
   <header class="header" id="header">
     <div class="header__inner container">
-      <a href="index.html" class="header__logo-link">
+      <a href="./index.html" class="header__logo-link">
         <img src="images/logo.png" alt="Мир Массажа" class="header__logo">
         <span class="header__brand-text">МИР</span>
       </a>
       <nav class="nav">
         <ul class="nav__list">
-          <li><a href="index.html" class="nav__link">Главная</a></li>
-          <li><a href="courses.html" class="nav__link">Курсы</a></li>
-          <li><a href="about.html" class="nav__link">О нас</a></li>
-          <li><a href="contacts.html" class="nav__link">Контакты</a></li>
+          <li><a href="./index.html" class="nav__link">Главная</a></li>
+          <li><a href="./courses.html" class="nav__link">Курсы</a></li>
+          <li><a href="./about.html" class="nav__link">О нас</a></li>
+          <li><a href="./contacts.html" class="nav__link">Контакты</a></li>
         </ul>
         <button class="nav__toggle" aria-label="Меню">
           <span></span>
@@ -35,14 +35,14 @@
   </header>
 
   <main>
-    <section class="page-hero">
+    <section class="page-hero" id="hero">
       <div class="container animate-on-scroll">
         <h1>Наши курсы</h1>
         <p>Выберите направление и начните путь к востребованной профессии массажиста в Ташкенте</p>
       </div>
     </section>
 
-    <section class="section courses-preview">
+    <section class="section courses-preview" id="services">
       <div class="container">
         <div class="courses-page__grid">
           <article class="course-card animate-on-scroll">
@@ -91,7 +91,7 @@
       </div>
     </section>
 
-    <section class="cta-block">
+    <section class="cta-block" id="contact">
       <div class="container">
         <h2>Не знаете, какой курс выбрать?</h2>
         <p>Получите бесплатную консультацию — поможем определиться с направлением</p>
@@ -116,10 +116,10 @@
         <nav class="footer__nav">
           <h4>Навигация</h4>
           <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="courses.html">Курсы</a></li>
-            <li><a href="about.html">О нас</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="./index.html">Главная</a></li>
+            <li><a href="./courses.html">Курсы</a></li>
+            <li><a href="./about.html">О нас</a></li>
+            <li><a href="./contacts.html">Контакты</a></li>
           </ul>
         </nav>
         <nav class="footer__nav">
@@ -138,5 +138,6 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
 </body>
 </html>
