@@ -1,0 +1,4 @@
+Contact: mailto:security@example.com
+Preferred-Languages: ru, en
+Policy: /security-policy.html
+

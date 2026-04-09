@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'self' https://mirbonus.bitrix24site.ru https://www.google.com https://www.google.com/maps https://maps.google.com; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https:; script-src 'self' https:; connect-src 'self' https:; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="description" content="Висцеральная терапия и восстановление организма по системе МИР. Центр висцеральной терапии «Мир Массажа — Доктор Миркамиль».">
   <meta name="keywords" content="висцеральная терапия Алматы, висцеральная терапия, лечение ЖКТ, лечение позвоночника, доктор Миркамиль, система МИР, восстановление организма">
   <meta property="og:title" content="Висцеральная терапия | Доктор Миркамиль — МИР">
@@ -48,6 +50,9 @@
           <div class="mir-hero__actions">
             <a href="#treatment" class="btn btn--primary btn--xl">ЛЕЧЕНИЕ</a>
             <a href="#education" class="btn btn--secondary btn--xl">ОБУЧЕНИЕ</a>
+          </div>
+          <div class="mir-hero__actions" style="margin-top: 12px;">
+            <button class="btn btn--primary btn--xl js-b24-open" type="button">Записаться на консультацию</button>
           </div>
           <div class="mir-hero__subtitle">Центр висцеральной терапии<br>Доктора Миркамиля</div>
         </div>
@@ -355,7 +360,7 @@
       <div class="container">
         <h2>Нужна консультация?</h2>
         <p>Оставьте заявку — мы свяжемся с вами и подскажем лучший маршрут: лечение или обучение</p>
-        <a href="#contact" class="btn btn--primary">Оставить заявку</a>
+        <button class="btn btn--primary js-b24-open" type="button">Записаться на консультацию</button>
       </div>
     </section>
 
@@ -382,31 +387,15 @@
             </div>
           </div>
           <div class="contact-form animate-on-scroll" id="contact-form">
-            <form id="main-contact-form" class="contact-form__form">
-              <div class="form-group">
-                <label for="name">Ваше имя *</label>
-                <input type="text" id="name" name="name" required placeholder="Введите имя">
-                <span class="form-error" id="name-error"></span>
-              </div>
-              <div class="form-group">
-                <label for="phone">Телефон *</label>
-                <input type="tel" id="phone" name="phone" required placeholder="+998 90 123 45 67">
-                <span class="form-error" id="phone-error"></span>
-              </div>
-              <div class="form-group">
-                <label for="city">Город *</label>
-                <input type="text" id="city" name="city" required placeholder="Ваш город">
-                <span class="form-error" id="city-error"></span>
-              </div>
-              <div class="form-group">
-                <label for="interest">Выберите направление</label>
-                <select id="interest" name="interest">
-                  <option value="Лечение">Лечение</option>
-                  <option value="Обучение">Обучение</option>
-                </select>
-              </div>
-              <button type="submit" class="btn btn--primary" style="width: 100%;">Отправить заявку</button>
-            </form>
+            <div class="b24-inline-wrap" aria-label="Форма Bitrix24">
+              <iframe
+                class="b24-inline-frame"
+                title="Запись на консультацию (Bitrix24)"
+                src="https://mirbonus.bitrix24site.ru/crm_form_tq630/"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>
@@ -531,8 +520,23 @@
             <option value="Обучение">Обучение</option>
           </select>
         </div>
-        <button type="submit" class="btn btn--primary" style="width:100%;">Получить скидку</button>
+        <button type="button" class="btn btn--primary js-b24-open" style="width:100%;">Оставить заявку</button>
       </form>
+    </div>
+  </div>
+
+  <div class="mir-modal" id="b24-modal" aria-hidden="true">
+    <div class="mir-modal__dialog mir-modal__dialog--wide" role="dialog" aria-modal="true" aria-label="Анкета Bitrix24">
+      <button class="mir-modal__close" type="button" aria-label="Закрыть" data-b24-close>✕</button>
+      <div class="b24-frame-wrap">
+        <iframe
+          class="b24-frame"
+          title="Анкета Bitrix24"
+          src="https://mirbonus.bitrix24site.ru/crm_form_tq630/"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
     </div>
   </div>
 
@@ -540,10 +544,11 @@
     <a class="mir-fab__btn" href="https://wa.me/998336000667" target="_blank" rel="noopener">СВЯЗАТЬСЯ</a>
   </div>
 
-  <script src="js/main.js"></script>
-  <script src="js/animations.js"></script>
-  <script src="js/carousel.js"></script>
-  <script src="js/popup.js"></script>
-  <script src="js/contact-button.js"></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/carousel.js" defer></script>
+  <script src="js/popup.js" defer></script>
+  <script src="js/contact-button.js" defer></script>
+  <script src="js/bitrix24-iframe.js" defer></script>
 </body>
 </html>

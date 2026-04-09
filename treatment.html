@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'self' https://mirbonus.bitrix24site.ru https://www.google.com https://www.google.com/maps https://maps.google.com; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https:; script-src 'self' https:; connect-src 'self' https:; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="description" content="Клиники восстановления здоровья МИР — комплексное восстановление организма без лекарств и операций. 16 лечебных методик, 6 диагностических протоколов.">
   <title>Лечение — Клиники МИР | Восстановление здоровья</title>
   <link rel="stylesheet" href="css/style.css">
@@ -304,8 +306,8 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
-  <script src="js/animations.js"></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/animations.js" defer></script>
 </body>
 </html>
 

@@ -29,9 +29,9 @@
   const open = () => {
     modal.classList.add("is-open");
     modal.setAttribute("aria-hidden", "false");
+    const firstFocusable = modal.querySelector("input, select, textarea, button, a[href]");
+    firstFocusable?.focus?.();
     markShownThisSession();
-    const firstInput = modal.querySelector("input, select, button");
-    if (firstInput) firstInput.focus();
   };
 
   const close = () => {
@@ -39,23 +39,22 @@
     modal.setAttribute("aria-hidden", "true");
   };
 
-  const onKeyDown = (e) => {
-    if (e.key === "Escape") close();
-  };
-
   closeBtn?.addEventListener("click", close);
+  modal.addEventListener("click", (e) => {
+    const closeEl = e.target?.closest?.("[data-modal-close]");
+    if (!closeEl) return;
+    close();
+  });
   modal.addEventListener("click", (e) => {
     if (e.target === modal) close();
   });
   dialog?.addEventListener("click", (e) => e.stopPropagation());
-  window.addEventListener("keydown", onKeyDown);
 
-  const form = modal.querySelector("#discount-form");
-  form?.addEventListener("submit", (e) => {
-    e.preventDefault();
-    close();
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") close();
   });
 
+  // Keep legacy behavior: show discount popup once per session (site-owned).
   window.setTimeout(() => {
     if (!isShownThisSession()) open();
   }, 3000);

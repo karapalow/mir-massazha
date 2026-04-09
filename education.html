@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'self' https://mirbonus.bitrix24site.ru; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https:; script-src 'self' https:; connect-src 'self' https:; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="description" content="Международная Академия Массажного Искусства МИР — обучение специалистов по восстановлению организма. 16 лечебных методик, 6 диагностических систем, практика на пациентах.">
   <title>Обучение — Академия МИР | Подготовка специалистов</title>
   <link rel="stylesheet" href="css/style.css">
@@ -226,8 +228,8 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
-  <script src="js/animations.js"></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/animations.js" defer></script>
 </body>
 </html>
 
