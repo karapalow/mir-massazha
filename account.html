@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'self' https://mirbonus.bitrix24site.ru; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https:; script-src 'self' https:; connect-src 'self' https:; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="Личный кабинет пациента МИР: записи, семинары, сертификаты.">
+  <title>Кабинет — МИР</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="header__inner container">
+      <a href="./index.html" class="header__logo-link">
+        <img src="images/logo.png" alt="МИР" class="header__logo">
+        <span class="header__brand-text">МИР</span>
+      </a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="./index.html#hero" class="nav__link">Главная</a></li>
+          <li><a href="./booking.html" class="nav__link">Запись</a></li>
+          <li><a href="./diagnostic-test.html" class="nav__link">Тест</a></li>
+        </ul>
+        <a href="./auth.html" class="header__register">Зарегистрироваться</a>
+        <a href="./auth.html" class="header__account" aria-label="Аккаунт">👤</a>
+        <button class="nav__toggle" aria-label="Меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container animate-on-scroll">
+        <h1>Кабинет</h1>
+        <p>Профиль, записи, семинары, сертификаты и рекомендации — в одном месте.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="mir-dashboard animate-on-scroll" data-dashboard>
+          <div class="mir-dashboard__top">
+            <div>
+              <div class="mir-dashboard__hello" data-hello>Здравствуйте</div>
+              <div class="mir-dashboard__sub">Система МИР · личные данные и история</div>
+            </div>
+            <div class="mir-dashboard__actions">
+              <a class="btn btn--secondary" href="./booking.html">Новая запись</a>
+              <button class="btn btn--primary" type="button" data-logout>Выйти</button>
+            </div>
+          </div>
+
+          <div class="mir-dashboard__grid">
+            <section class="mir-panel">
+              <div class="mir-panel__title">Профиль</div>
+              <div class="mir-panel__body" data-profile></div>
+              <div class="mir-panel__footer">
+                <button class="btn btn--secondary" type="button" data-edit-profile>Редактировать</button>
+              </div>
+            </section>
+
+            <section class="mir-panel">
+              <div class="mir-panel__title">Записи</div>
+              <div class="mir-panel__body" data-appointments></div>
+            </section>
+
+            <section class="mir-panel">
+              <div class="mir-panel__title">Семинары</div>
+              <div class="mir-panel__body" data-seminars>
+                <div class="mir-empty">Пока пусто. Регистрация на семинары появится в следующем шаге.</div>
+              </div>
+            </section>
+
+            <section class="mir-panel">
+              <div class="mir-panel__title">Сертификаты</div>
+              <div class="mir-panel__body" data-certs>
+                <div class="mir-empty">Сертификаты будут доступны после прохождения семинара.</div>
+              </div>
+            </section>
+          </div>
+
+          <div class="mir-dashboard__hint">
+            Следующий этап (под Next.js): NextAuth/Auth.js, PostgreSQL/Prisma, QR‑билеты, PDF‑сертификаты, мультиязык.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom">
+        <p>© 2024 МИР. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mir-mobile-cta" aria-label="Быстрые действия">
+    <a class="mir-mobile-cta__btn" href="https://wa.me/998336000667" target="_blank" rel="noopener">WhatsApp</a>
+    <a class="mir-mobile-cta__btn" href="tel:+998336000667">Звонок</a>
+    <a class="mir-mobile-cta__btn mir-mobile-cta__btn--primary" href="./booking.html">Запись</a>
+  </div>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/auth.js" defer></script>
+  <script src="js/account.js" defer></script>
+</body>
+</html>
+

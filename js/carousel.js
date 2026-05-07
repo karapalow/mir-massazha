@@ -46,6 +46,9 @@
   root.addEventListener("focusin", stop);
   root.addEventListener("focusout", start);
 
+  // Smoother slide easing for premium feel.
+  track.style.transition = "transform 560ms cubic-bezier(.16,1,.3,1)";
+
   render();
   start();
 })();

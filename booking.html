@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'self' https://mirbonus.bitrix24site.ru; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https:; script-src 'self' https:; connect-src 'self' https:; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="Онлайн запись в систему МИР — выберите услугу, филиал, специалиста и время.">
+  <title>Онлайн запись — МИР</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="header__inner container">
+      <a href="./index.html" class="header__logo-link">
+        <img src="images/logo.png" alt="МИР" class="header__logo">
+        <span class="header__brand-text">МИР</span>
+      </a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="./index.html#hero" class="nav__link">Главная</a></li>
+          <li><a href="./index.html#education" class="nav__link">Обучение</a></li>
+          <li><a href="./index.html#contact" class="nav__link">Контакты</a></li>
+        </ul>
+        <button class="nav__toggle" aria-label="Меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero" id="hero">
+      <div class="container animate-on-scroll">
+        <h1>Онлайн запись</h1>
+        <p>Выберите услугу, филиал, специалиста и удобное время. Подтверждение — через WhatsApp/Telegram.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="mir-booking animate-on-scroll" data-booking>
+          <div class="mir-booking__head">
+            <div>
+              <h2 style="margin:0;">Запись в систему МИР</h2>
+              <p style="margin:6px 0 0;color:#6b7280;">Премиум‑flow (6 шагов) — без смены бренда.</p>
+            </div>
+            <div class="mir-booking__badge" data-step-badge>Шаг 1/6</div>
+          </div>
+
+          <div class="mir-booking__progress" aria-hidden="true">
+            <div class="mir-booking__progress-bar" data-progress></div>
+          </div>
+
+          <div class="mir-booking__body">
+            <div class="mir-booking__stage" data-stage></div>
+            <aside class="mir-booking__summary" aria-label="Резюме записи">
+              <div class="mir-booking__summary-title">Резюме</div>
+              <div class="mir-booking__summary-grid" data-summary></div>
+              <a class="btn btn--secondary" style="width:100%; margin-top: 12px;" data-wa-link target="_blank" rel="noopener">Открыть WhatsApp с заявкой</a>
+            </aside>
+          </div>
+
+          <div class="mir-booking__actions">
+            <button class="btn btn--secondary" type="button" data-prev disabled>Назад</button>
+            <button class="btn btn--primary" type="button" data-next>Далее</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom">
+        <p>© 2024 МИР. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mir-mobile-cta" aria-label="Быстрые действия">
+    <a class="mir-mobile-cta__btn" href="https://wa.me/998336000667" target="_blank" rel="noopener">WhatsApp</a>
+    <a class="mir-mobile-cta__btn" href="tel:+998336000667">Звонок</a>
+    <a class="mir-mobile-cta__btn mir-mobile-cta__btn--primary" href="./booking.html">Запись</a>
+  </div>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/booking.js" defer></script>
+</body>
+</html>
+

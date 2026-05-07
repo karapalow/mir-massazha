@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'self' https://mirbonus.bitrix24site.ru; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https:; script-src 'self' https:; connect-src 'self' https:; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="Диагностический тест МИР — найдите возможные причины дискомфорта за 2 минуты.">
+  <title>Диагностический тест — МИР</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="header__inner container">
+      <a href="./index.html" class="header__logo-link">
+        <img src="images/logo.png" alt="МИР" class="header__logo">
+        <span class="header__brand-text">МИР</span>
+      </a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="./index.html#hero" class="nav__link">Главная</a></li>
+          <li><a href="./index.html#education" class="nav__link">Обучение</a></li>
+          <li><a href="./booking.html" class="nav__link">Запись</a></li>
+        </ul>
+        <button class="nav__toggle" aria-label="Меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero" id="hero">
+      <div class="container animate-on-scroll">
+        <h1>Диагностический тест</h1>
+        <p>Найдите возможные причины дискомфорта за 2 минуты и получите рекомендации + CTA на запись.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="mir-test animate-on-scroll" data-test>
+          <div class="mir-test__head">
+            <div>
+              <h2 style="margin:0;">“Найдите возможные причины дискомфорта за 2 минуты”</h2>
+              <p style="margin:6px 0 0;color:#6b7280;">Интерактивный flow: прогресс, плавные переходы, результат.</p>
+            </div>
+            <div class="mir-test__badge" data-test-badge>1/8</div>
+          </div>
+
+          <div class="mir-test__progress" aria-hidden="true">
+            <div class="mir-test__progress-bar" data-test-progress></div>
+          </div>
+
+          <div class="mir-test__body" data-test-body></div>
+
+          <div class="mir-test__actions" data-test-actions>
+            <button class="btn btn--secondary" type="button" data-test-prev disabled>Назад</button>
+            <button class="btn btn--primary" type="button" data-test-next disabled>Далее</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom">
+        <p>© 2024 МИР. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mir-mobile-cta" aria-label="Быстрые действия">
+    <a class="mir-mobile-cta__btn" href="https://wa.me/998336000667" target="_blank" rel="noopener">WhatsApp</a>
+    <a class="mir-mobile-cta__btn" href="tel:+998336000667">Звонок</a>
+    <a class="mir-mobile-cta__btn mir-mobile-cta__btn--primary" href="./booking.html">Запись</a>
+  </div>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/diagnostic-test.js" defer></script>
+</body>
+</html>
+
