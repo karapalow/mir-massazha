@@ -41,8 +41,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Mobile nav toggle (class-based). This is intentionally minimal and doesn't prevent scrolling.
   if (navToggle && navList) {
+    navToggle.setAttribute("aria-expanded", "false");
     navToggle.addEventListener("click", () => {
-      navList.classList.toggle("nav__list--open");
+      const isOpen = navList.classList.toggle("nav__list--open");
+      navToggle.setAttribute("aria-expanded", String(isOpen));
     });
   }
 
@@ -53,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const clickedLink = e.target?.closest?.("a");
       if (!clickedLink) return;
       navList.classList.remove("nav__list--open");
+      navToggle?.setAttribute("aria-expanded", "false");
     });
   }
 
@@ -76,10 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const id = href.slice(1);
     const target = document.getElementById(id);
-
-    // Debug: log every anchor click for verification.
-    // eslint-disable-next-line no-console
-    console.debug("[AnchorNav] click", { href, id, targetFound: Boolean(target) });
 
     if (!target) return; // Let the browser handle it (will just jump nowhere).
 
