@@ -95,10 +95,10 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
       <div class="mir-bodymap__method" style="margin-top: 12px;">
         <div class="mir-bodymap__card-title">Следующий шаг</div>
-        <div style="color:#334155; font-size: 14px;">Запишитесь на консультацию — мы проведём диагностику и составим персональный маршрут восстановления.</div>
-        <div style="display:flex; gap: 10px; flex-wrap: wrap; margin-top: 12px;">
-          <a class="btn btn--primary" href="./booking.html">Записаться онлайн</a>
-          <a class="btn btn--secondary" href="./index.html">На главную</a>
+        <div style="color:#334155; font-size: 14px;">Результат теста — ориентир. Для точной диагностики используйте карту тела или запишитесь на консультацию.</div>
+        <div class="mir-cta-actions" style="margin-top: 12px;">
+          <a class="btn btn--primary" href="./index.html#bodymap">Карта тела</a>
+          <a class="btn btn--secondary" href="./booking.html">Записаться онлайн</a>
         </div>
       </div>
     `;

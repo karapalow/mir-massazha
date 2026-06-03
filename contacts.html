@@ -10,6 +10,8 @@
   <meta property="og:title" content="Контакты — Мир Массажа">
   <meta property="og:description" content="Свяжитесь с нами — школа массажа в Ташкенте.">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="images/logo.png">
+  <meta name="theme-color" content="#134126">
   <title>Контакты — Мир Массажа | Ташкент</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -47,22 +49,33 @@
     <section class="section contact-section" id="contact">
       <div class="container">
         <div class="contacts-page__grid">
-          <div class="contact__info animate-on-scroll">
-            <h2>Контактная информация</h2>
-            <div class="contact__item">
-              <div class="contact__item-icon">📞</div>
-              <div>
-                <strong>Телефон</strong><br>
-                <a href="tel:+998901234567">+998 90 123 45 67</a>
-              </div>
+          <div class="contact-card animate-on-scroll">
+            <h3>Контактная информация</h3>
+            <p class="contact-card__lead">Свяжитесь удобным способом — ответим и поможем с записью</p>
+            <div class="contact-card__channels">
+              <a class="contact-channel" href="tel:+998336000667">
+                <span class="contact-channel__icon" aria-hidden="true">📞</span>
+                <span>
+                  <span class="contact-channel__label">Телефон</span>
+                  <span class="contact-channel__value">+998 33 600 06 67</span>
+                </span>
+              </a>
+              <a class="contact-channel" href="https://wa.me/998336000667" target="_blank" rel="noopener noreferrer">
+                <span class="contact-channel__icon" aria-hidden="true">💬</span>
+                <span>
+                  <span class="contact-channel__label">WhatsApp</span>
+                  <span class="contact-channel__value">Написать в WhatsApp</span>
+                </span>
+              </a>
+              <a class="contact-channel" href="https://t.me/mirmassazha_uz" target="_blank" rel="noopener noreferrer">
+                <span class="contact-channel__icon" aria-hidden="true">✈️</span>
+                <span>
+                  <span class="contact-channel__label">Telegram</span>
+                  <span class="contact-channel__value">@mirmassazha_uz</span>
+                </span>
+              </a>
             </div>
-            <div class="contact__item">
-              <div class="contact__item-icon">✈️</div>
-              <div>
-                <strong>Telegram</strong><br>
-                <a href="https://t.me/mirmassazha_uz" target="_blank" rel="noopener">@mirmassazha_uz</a>
-              </div>
-            </div>
+            <div class="contact-card__extras">
             <div class="contact__item">
               <div class="contact__item-icon">📧</div>
               <div>
@@ -77,6 +90,7 @@
                 г. Ташкент, ул. Навои, 15
               </div>
             </div>
+            </div>
             <div class="working-hours">
               <h4>График работы</h4>
               <p>Ежедневно</p>
@@ -85,7 +99,7 @@
           </div>
           <div class="animate-on-scroll">
             <div class="contact-form" id="contact-form">
-              <h2 style="margin-bottom: 24px;">Напишите нам</h2>
+              <h2 class="contact-form__title">Напишите нам</h2>
               <form id="contacts-form" class="contact-form__form">
                 <div class="form-group">
                   <label for="contacts-name">Ваше имя *</label>
@@ -130,8 +144,8 @@
               <div class="branch-card__city">Ташкент</div>
               <p>Хамида Алимджана площадь, 13а, Ташкент</p>
               <div class="branch-card__phones">
-                <div>+998 33 600 06 67</div>
-                <div>+998 78 113 88 18</div>
+                <div><a href="tel:+998336000667">+998 33 600 06 67</a></div>
+                <div><a href="tel:+998781138818">+998 78 113 88 18</a></div>
               </div>
             </div>
             <div class="branch-card__map">
@@ -139,23 +153,18 @@
             </div>
           </div>
 
-          <div class="branch-card branch-card--samarkand animate-on-scroll">
+          <div class="branch-card animate-on-scroll">
             <div>
-              <div class="branch-card__title">Филиалы МИР — Самарканд</div>
+              <div class="branch-card__title">Филиал МИР — Самарканд</div>
               <div class="branch-card__city">Самарканд</div>
-              <p>Улица Амира Тимура, 103Б и 86а</p>
+              <p>Улица Амира Тимура, 103Б</p>
               <div class="branch-card__phones">
-                <div>+998 90 451 69 69</div>
-                <div>+998 90 463 69 69</div>
+                <div><a href="tel:+998904516969">+998 90 451 69 69</a></div>
+                <div><a href="tel:+998904636969">+998 90 463 69 69</a></div>
               </div>
             </div>
-            <div class="branch-card__map-grid">
-              <div class="branch-card__map">
-                <iframe src="https://www.google.com/maps?q=Amir%20Temur%20ko%27chasi%20103B%2C%20Samarkand%2C%20Uzbekistan&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
-              <div class="branch-card__map">
-                <iframe src="https://www.google.com/maps?q=Amir%20Temur%20ko%27chasi%2086A%2C%20Samarkand%2C%20Uzbekistan&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
+            <div class="branch-card__map">
+              <iframe src="https://www.google.com/maps?q=Amir%20Temur%20ko%27chasi%20103B%2C%20Samarkand%2C%20Uzbekistan&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Карта филиала МИР в Самарканде"></iframe>
             </div>
           </div>
 
@@ -165,7 +174,7 @@
               <div class="branch-card__city">Сайрам / Шымкент</div>
               <p>Рынок Сайрам, Амира Темира улица, 237/4, Шымкент</p>
               <div class="branch-card__phones">
-                <div>+7 747 702 00 57</div>
+                <div><a href="tel:+77477020057">+7 747 702 00 57</a></div>
               </div>
             </div>
             <div class="branch-card__map">
@@ -187,8 +196,10 @@
           <p class="footer__address">г. Ташкент, ул. Навои, 15</p>
           <p class="footer__hours">Ежедневно: 09:00–21:00</p>
           <div class="footer__social">
-            <a href="https://t.me/mirmassazha_uz" target="_blank" rel="noopener" aria-label="Telegram">✈️</a>
-            <a href="https://instagram.com/mirmassazha" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+            <a href="tel:+998336000667" aria-label="Позвонить">📞</a>
+            <a href="https://wa.me/998336000667" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">💬</a>
+            <a href="https://t.me/mirmassazha_uz" target="_blank" rel="noopener noreferrer" aria-label="Telegram">✈️</a>
+            <a href="https://instagram.com/mirmassazha" target="_blank" rel="noopener noreferrer" aria-label="Instagram">📷</a>
           </div>
         </div>
         <nav class="footer__nav">

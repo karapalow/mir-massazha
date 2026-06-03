@@ -41,6 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Mobile nav toggle (class-based). This is intentionally minimal and doesn't prevent scrolling.
   if (navToggle && navList) {
+    if (!navToggle.getAttribute("aria-controls") && navList.id) {
+      navToggle.setAttribute("aria-controls", navList.id);
+    }
     navToggle.setAttribute("aria-expanded", "false");
     navToggle.addEventListener("click", () => {
       const isOpen = navList.classList.toggle("nav__list--open");

@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const BRANCHES = [
     { id: "tashkent", city: "Ташкент", title: "Филиал МИР — Ташкент", address: "пл. Хамида Алимджана, 13а" },
-    { id: "samarkand", city: "Самарканд", title: "Филиалы МИР — Самарканд", address: "ул. Амира Тимура, 103Б и 86а" },
+    { id: "samarkand", city: "Самарканд", title: "Филиал МИР — Самарканд", address: "ул. Амира Тимура, 103Б" },
     { id: "sairam", city: "Сайрам / Шымкент", title: "Филиал МИР — Сайрам", address: "Амира Темира 237/4" },
     { id: "online", city: "Онлайн", title: "Онлайн‑центр МИР", address: "Zoom / Telegram / WhatsApp" }
   ];
